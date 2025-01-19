@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+</head>
+<body>
+    <div id="todoList">
+        <ul id="list">
+          <li>
+            Item 1 <button class="deleteBtn">Delete</button>
+          </li>
+          <li>
+            Item 2 <button class="deleteBtn">Delete</button>
+          </li>
+          <li>
+            Item 3 <button class="deleteBtn">Delete</button>
+          </li>
+        </ul>
+      </div>
+      <script>
+        // Event bubbling is the process where the event starts from the target element (child)
+        //  and propagates upward through its ancestors in the DOM,
+        //  all the way to the top-level elements like <body>, <html>, document, and window.
+
+        // Event bubling me child -> parent -> body -> document -> window 
+        const todoList = document.getElementById('todoList'); // Parent container
+        const list = document.getElementById('list'); // The list of to-do items
+      
+        // Event listener on the parent (bubbling phase)
+        todoList.addEventListener('click', (event) => {
+          // Check if the clicked element is a delete button
+          if (event.target && event.target.classList.contains('deleteBtn')) {
+            // Find the parent <li> element of the clicked button
+            const todoItem = event.target.closest('li');
+            // Remove the list item (todo item)
+            todoItem.remove();
+            console.log('Item deleted');
+          }
+        });
+        // We attach a single event listener to the parent container (todoList),
+        //  rather than attaching event listeners to each delete button individually. This is an example of event delegation.
+        // When you click the delete button, the event bubbles up from the button to the parent (todoList), 
+        // and we check if the clicked element (event.target) is the delete button by checking its class deleteBtn.
+
+
+
+// Event bubbling => is the process where events propagate up from the target element to its ancestors.
+
+// Event delegation => is a technique that uses event bubbling to manage events on child elements through their parent.
+
+      </script>
+      
+
+
+</body>
+</html>

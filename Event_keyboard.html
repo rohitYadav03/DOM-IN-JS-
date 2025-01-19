@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyBoard Event</title>
+</head>
+<body>
+    <input type="text" id="input" placeholder="Write Here...">
+
+
+    <script>
+let input_box = document.getElementById("input")
+input_box.addEventListener('keydown', () => {
+    console.log('key pressed', event.key)
+})
+
+input_box.addEventListener('keyup', () => {
+    console.log('Key released: ', event.key); 
+})
+// keydown: Activated when a key is pressed down.
+// keyup: Activated when a key is released.
+
+    </script>
+</body>
+</html>

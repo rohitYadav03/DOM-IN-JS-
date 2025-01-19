@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="hoverDiv" style="width:200px; height:200px; background-color: lightblue;">
+        Hover over me
+      </div>
+
+      <div id="pressDiv" style="width:200px; height:200px; background-color: lightgreen; ">
+        Press down the mouse
+
+      </div>
+<button id="btn">Click Me</button>
+
+
+    <script>
+
+let button = document.getElementById('btn')
+button.addEventListener('click', function(){
+    alert("hello world")
+})
+const div = document.getElementById('hoverDiv')
+div.addEventListener('mouseover', () => {
+    div.style.backgroundColor = "red";
+}) 
+
+div.addEventListener('mouseout', () => {
+    div.style.backgroundColor = "lightblue";
+});
+
+let mouseDown = document.getElementById('pressDiv');
+mouseDown.addEventListener('mousedown', function(){
+    mouseDown.style.backgroundColor = 'orange';
+})
+
+mouseDown.addEventListener('mouseup', () => {
+    mouseDown.style.backgroundColor = 'lightcoral';
+});
+// Summary of the events:
+// click: Activated when clicking the mouse.
+// mouseover: Activated when the mouse enters an element.
+// mouseout: Activated when the mouse leaves an element.
+// mousedown: Activated when the mouse button is pressed.
+// mouseup: Activated when the mouse button is released.
+    </script>
+</body>
+</html>

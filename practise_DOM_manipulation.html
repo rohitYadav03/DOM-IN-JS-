@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="message">hiii</div>
+<p id="p">this is a paragragh</p>
+<div id="box"></div>
+<a id="a" href="https://www.google.com">link</a>
+
+<div id="container">
+hello container
+</div>
+    <script>
+let heading = document.getElementById("message");
+heading.innerHTML= "<h2> Welcome to the DOM! </h2>";
+
+let para = document.querySelector('#p')
+para.textContent = 'hiiii';
+
+let box = document.querySelector('#box');
+box.classList.add("highlight");
+console.log(box.classList);
+
+let link = document.getElementById('a');
+link.setAttribute('href','https://www.example.com');
+
+let container = document.getElementById('container');
+container.style.backgroundColor = "yellow";
+container.style.color = "black";
+container.style.border = '2px solid black'
+    </script>
+</body>
+</html>

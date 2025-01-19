@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manipulate DOM elements</title>
+</head>
+<body>
+  <!-- <p id="par">Lorem ipsum dolor sit amet.</p> -->
+  <!-- <img id="logo" src="old-logo.png" alt="Logo"> -->
+
+  <div id="box" class="red">Content</div>
+
+
+  <script>
+    // let para = document.getElementById("par")
+    // para.innerHTML = "<i>hii</i>" // alway put "" 
+
+    // const img = document.getElementById('logo');
+    // console.log(img.getAttribute('src'));
+    // img.setAttribute('src',"new-img.jpg")
+    // console.log(img.getAttribute('src'));
+
+    const box = document.getElementById('box');
+    box.classList.add("blue"); // this add another class
+    console.log(box.classList); 
+    
+    box.classList.remove("red");
+
+    box.classList.toggle("red");  // toggle  a class adds red if it is not there and remove it if it is there
+// console.log(box.className);
+
+box.style.color = "red";
+box.style.backgroundColor = "Blue"
+  </script>
+</body>
+</html>

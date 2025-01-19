@@ -1,0 +1,5 @@
+1. DOM as a Tree-Like Structure
+The DOM is indeed a tree-like structure that represents the hierarchical relationship of HTML elements.
+ Each element in the HTML becomes a node in this tree, and the relationships (parent, child, siblings)
+  between elements are mapped in this structure.
+

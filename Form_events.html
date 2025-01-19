@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" id="name" placeholder="Enter Your Name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <input type="text" id="username" placeholder="Username">
+
+
+    <script>
+const form = document.getElementById("myForm")
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    console.log("Form submitted without page reload!");
+    const name = document.getElementById('name').value;
+    if(name.trim() === ""){
+        alert("Please enter your name ")
+    }else{
+        alert("Form submitted !");
+    }
+})
+
+const input = document.getElementById('username');
+input.addEventListener('focus', () => {
+    input.style.backgroundColor = 'red';
+})
+input.addEventListener('blur',() => {
+    input.style.backgroundColor = 'white';
+})
+// Summary of Form Events:
+// submit: Triggered when the form is submitted (either through a button or pressing "Enter").
+// focus: Triggered when an element gains focus (e.g., when the user clicks or navigates to the input field).
+// blur: Triggered when an element loses focus (e.g., when the user clicks or tabs out of the input field).
+
+    </script>
+</body>
+</html>

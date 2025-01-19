@@ -1,0 +1,27 @@
+<!-- Event capturing (also called the capture phase) is when an event travels 
+ from the root (window or document) down to the target element in the DOM tree. -->
+
+
+ <!-- element.addEventListener('eventType', eventHandler, true); -->
+
+ Visualizing Capturing
+If the DOM is structured as:
+
+Window -> Document -> HTML -> Body -> Parent -> Child
+
+When you click on Child, capturing order:
+Window
+Document
+HTML
+Body
+Parent
+Child
+
+stopPropagation():
+<!-- What it does: Stops the event from propagating (bubbling or capturing).
+  This means the event will not be passed on to the parent elements. -->
+
+
+  preventDefault():
+<!-- What it does: Prevents the default action associated with the event.
+For example, if you click a link, the default action is to navigate to the link’s URL. Using preventDefault() will stop that behavior. -->
