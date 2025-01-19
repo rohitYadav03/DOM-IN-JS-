@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM CREATION</title>
+</head>
+<body>
+    <div class="container"></div>
+
+    <button id="btn">CLICK HERE</button>
+    <script>
+ const parent = document.querySelector('.container')
+let button = document.getElementById("btn");
+
+button.addEventListener('click', (e) => {
+    let newDiv = document.createElement('div'); // this will create a div
+  let button = document.createElement('button');
+  button.textContent= "New Div";
+  newDiv.append(button);
+  let para = document.createElement('p');
+  para.textContent = "This is title";
+  newDiv.append(para);
+    newDiv.classList.add('card'); // Add a class to the new div
+    parent.append(newDiv)
+    
+})
+    </script>
+</body>
+</html>

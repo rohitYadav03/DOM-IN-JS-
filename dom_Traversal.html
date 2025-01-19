@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversal</title>
+</head>
+<body>
+    <div class="container">
+        <h2>new keyword</h2>
+        <p id="para" >para1</p>
+        <h1 id="child">Hello</h1>
+
+        <a href="example.com">ex</a>
+    </div>
+    
+    <script>
+    //  let childElem = document.getElementById('child');
+    //  const parentElem = childElem.parentElement; // parentElement => Returns: The parent element if it exists, or null if the element does not have a parent
+    //  console.log(parentElem);
+     
+ //children => children returns an HTMLCollection (similar to an array, 
+ //       but not quite) of all child elements inside the selected element.
+
+
+//  let container = document.querySelector('.container');
+//  let childElems = container.children;
+//  console.log(childElems);
+ 
+// firstElementChild => Returns the first child element of the current element.
+           //  Gets the first child element.
+
+let parent = document.querySelector(".container")
+console.log(parent.firstElementChild);
+
+console.log(parent.lastElementChild); // lastElementChild: Gets the last child element
+
+//3. Sibling Element Traversal
+// nextElementSibling: Gets the next sibling element.
+// previousElementSibling: Gets the previous sibling element.
+
+
+let para = document.getElementById('para')
+  console.log(para.nextElementSibling);
+  console.log(para.previousElementSibling);
+
+
+//   closest(selector) => 
+//  losest starts with the element itself and moves upward in the DOM tree.
+// If the element itself matches the selector, it is immediately returned.
+// If no matching ancestor is found, null is returned.
+// It is especially useful for event delegation, where you want to handle events on parent elements.
+    </script>
+</body>
+</html>

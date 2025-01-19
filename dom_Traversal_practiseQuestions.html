@@ -1,0 +1,82 @@
+<!-- Practice Exercises
+1.Find the parent element of a <span> with the ID highlight and log it.
+2.Select a <div> with the ID main and log its first and last child element.
+3.Log the next and previous sibling elements of a <li> with the class active.
+4.Use closest() to find the nearest ancestor with the class wrapper for a nested <button> element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversal Practise</title>
+</head>
+<body>
+    <div id="container">
+        <span id="highlight">hii i am span</span>
+    </div>
+
+    <div id="main">
+        <h1>H1</h1>
+        <h2>H2</h2>
+        <h3>H3</h3>
+    </div>
+
+   
+        <ol class="active">
+            <li>item 1</li>
+            <li id="secnd">item 2</li>
+            <li>item 3</li>
+        </ol>
+
+        <div class="wrapper">
+            <div class="inner">
+                <button>Click Me</button>
+            </div>
+        </div>
+    <script>
+        let child = document.getElementById('highlight');
+        console.log(child.parentElement);
+        
+        let parent = document.getElementById('main');
+        console.log(parent.firstElementChild);
+        console.log(parent.lastElementChild);
+        
+        // let listItem = document.querySelector('#active');
+       let secnd = document.querySelector('#secnd');
+       console.log(secnd.nextElementSibling);
+       console.log(secnd.previousElementSibling);
+       
+        let buttonElent = document.querySelector('button');
+        console.log(buttonElent.closest('.wrapper'));
+        
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creation and Removal </title>
+</head>
+<body>
+    <ul id="list"></ul>
+
+    <script>
+ const list = document.getElementById('list')
+const listitem = document.createElement('li'); // dom creation
+listitem.textContent = "Apple";
+list.append(listitem) // dom appending
+// insertBefore(newNode, referenceNode): Inserts a new element before a specific existing element.
+
+//1. removeChild(childNode) => 
+// Removes a specific child element from its parent element.
+// You must first reference the parent element, and then specify which child you want to remove.
+
+// let parent = document.querySelector('.container');
+// let child = document.querySelector('.card');  // Reference the child element you want to remove
+// parent.removeChild(child);  // Removes the child element from the parent
+
+// 2. remove() => 
+// Removes the element itself from the DOM, meaning it doesn’t need the reference to the parent.
+// The element is removed directly from wherever it is in the DOM.
+// let child = document.querySelector('.card');
+// child.remove();  // Removes the element from the DOM directly
+
+    </script>
+</body>
+</html>
